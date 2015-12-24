@@ -1,0 +1,8 @@
+<h1>Please sign in</h1>
+<%= form_tag user_sign_in_path do %>
+<dl>
+  <dt><strong>Username:</strong></dt>
+  <dd><%= text_field_tag :username %></dd>
+</dl>
+<%= submit_tag 'Sign in' %>
+<% end %>

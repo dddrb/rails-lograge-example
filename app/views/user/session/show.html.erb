@@ -1,0 +1,6 @@
+<h1>Profile</h1>
+<dl>
+  <dt><strong>Username:</strong></dt>
+  <dd><%= current_user.username %></dd>
+</dl>
+<%= button_to 'Sign out', user_sign_out_path, method: :delete %>
