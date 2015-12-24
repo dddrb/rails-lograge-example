@@ -12,4 +12,9 @@ Rails.application.configure do
       time: event.time, timestamp: event.time
     }
   end
+
+  config.lograge.ignore_actions = %W(
+    user/session#new
+    logs#index
+  )
 end

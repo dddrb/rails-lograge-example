@@ -1,0 +1,40 @@
+<h1>Logs</h1>
+
+<%= form_tag logs_path, method: :get do %>
+<dl>
+  <dt><strong>message:</strong></dt>
+  <dd><%= text_field_tag :message, @message %></dd>
+</dl>
+<%= submit_tag 'Search' %>
+<% end %>
+
+<br/>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>method</th>
+      <th>path</th>
+      <th>controller</th>
+      <th>action</th>
+      <th>status</th>
+      <th>username</th>
+      <th>message</th>
+      <th>timestamp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @logs.each do |log| %>
+      <tr>
+        <td><%= log.method %></td>
+        <td><%= log.path %></td>
+        <td><%= log.controller %></td>
+        <td><%= log.action %></td>
+        <td><%= log.status %></td>
+        <td><%= log.username %></td>
+        <td><%= log.message %></td>
+        <td><%= log.timestamp %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

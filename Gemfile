@@ -50,3 +50,4 @@ gem 'logstash-event'
 gem 'fluentd', require: false
 gem 'fluent-plugin-elasticsearch', require: false
 gem 'foreman', require: false
+gem 'elasticsearch-persistence'

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get :logs, to: 'logs#index'
+
   namespace :user do
     get    :sign_in,  to: 'session#new'
     post   :sign_in,  to: 'session#create'
